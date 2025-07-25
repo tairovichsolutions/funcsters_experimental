@@ -1,11 +1,11 @@
 package io.funcsters.entity;
 
 public enum VoteType {
-    BEST_PRACTICE("Best Practice"),
+    BEST_PRACTICES("Best Practices"),
     EFFICIENT("Efficient"),
     CLEVER("Clever"),
     CLEAN("Clean"),
-    SHORTEST("Short");
+    SHORTEST("Shortest");
 
     private final String label;
 

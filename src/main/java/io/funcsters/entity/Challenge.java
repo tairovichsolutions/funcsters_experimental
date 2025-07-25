@@ -32,11 +32,21 @@ public class Challenge {
     @Column(nullable = false)
     private String description;
 
-    @Lob
-    private String hints;
+//    @Lob
+//    private String hints;
+//
+//    @Lob
+//    private String constraints;
 
-    @Lob
-    private String constraints;
+    @ElementCollection
+    @CollectionTable(name = "challenge_hints", joinColumns = @JoinColumn(name = "challenge_id"))
+    @Column(name = "hint")
+    private Set<String> hints;
+
+    @ElementCollection
+    @CollectionTable(name = "challenge_constraints", joinColumns = @JoinColumn(name = "challenge_id"))
+    @Column(name = "constraint")
+    private Set<String> constraints;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
