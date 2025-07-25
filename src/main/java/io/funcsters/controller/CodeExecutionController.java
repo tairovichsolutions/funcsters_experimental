@@ -18,7 +18,7 @@ public class CodeExecutionController {
 
     @PostMapping("/{problemId}/run")
     public ResponseEntity<Judge0Response> runCode(@PathVariable String problemId,
-                                                  @RequestBody CodeExecutionRequest request){
+                                                  @RequestBody CodeExecutionRequest request) {
         Judge0Response judge0Response = executionService.runCode(problemId, request);
         return ResponseEntity.status(HttpStatus.CREATED).body(judge0Response);
     }

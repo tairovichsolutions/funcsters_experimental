@@ -1,0 +1,6 @@
+package io.funcsters.entity;
+
+public enum SubmissionStatus {
+    SUCCESS, FAILED, RUNTIME_ERROR, COMPILE_ERROR, MEMORY_LIMIT_EXCEEDED,
+    INTERNAL_ERROR, PENDING, IN_PROGRESS, TIME_LIMIT_EXCEEDED
+}
